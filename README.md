@@ -1,2 +1,5 @@
 # adso3564995
-Lorem ipsum dolor sit amet. 
+## Felipe Loaiza
+![Profile picture](src/images/caricaturapipe.webp)
+### Análisis y Desarrollo de Software
+***Centro Procesos Industriales y Produccion***
