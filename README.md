@@ -1,6 +1,6 @@
 # ADSO3564995
 ## Felipe Loaiza
-![Profile picture](src/images/caricaturapipe.webp)
+![Profile picture](src/images/image.webp)
 ### Análisis y Desarrollo de Software
 ***Centro Procesos Industriales y Produccion***
 > SENA - Regional Caldas
