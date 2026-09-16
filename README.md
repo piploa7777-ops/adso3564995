@@ -8,7 +8,7 @@
 |ID  | THEME     | DESCRIPTION
 |--- |---        |---
 |01. | Emmet     |Workflow - Markup & Styling
-|02. | HTML      |Structure - Hyoertext Markup Language 
+|02. | HTML      |Structure - Hypertext Markup Language 
 |03. |CSS        |Look & Feel - Cascading Style Sheet 
 |04. |Javascript |Behaivor - Programing Language 
 
