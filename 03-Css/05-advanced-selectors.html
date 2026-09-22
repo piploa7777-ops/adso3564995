@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-Advance Selectors</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <style>
+        ul.fruits > li[class] + li{
+            background-color: rgb(97, 135, 58);
+            color: #ff09;
+            padding: 0.2rem;
+        }
+    </style>
+</head>
+
+<body class="css">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"></path></svg>
+            </a>
+    </nav>
+    <main>
+        <header class="mmenu internal">
+         <h1>05-Advance Selectors</h1>
+           <img src="images/logo-css.png">
+         <h3>Description</h3>
+         <ul> 
+            <li>Children (>)</li>
+            <li>Adjacent/Sibling</li>
+            <li>Attribute [class]</li>
+         </ul>
+        </header>
+        <section>
+            <h3 class="subtitle">Example:</h3>
+            <ul class="fruits">
+                <li>Apple 🍎</li>
+                <li class="higlight">Orange 🍊</li>
+                <li>Lime 🍋</li>
+                <li>Strawberry 🍓</li>
+                <li>Grape 🍇</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
