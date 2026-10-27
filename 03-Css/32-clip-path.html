@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32-clip-path</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <style>
+        div.clip{
+            width: 340px;
+            height: 240px;
+            background: url(images/pittsburgh.jpg)
+                        no-repeat center /cover;
+            margin: 2rem auto; 
+            transition: all 0.5seg ease;
+            
+            &.clip1{
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+                &:hover{
+                    clip-path: polygon(50% 0%, 100% 0, 100% 40%, 100% 64%, 100% 100%, 60% 100%, 0 100%, 0 63%, 0 35%, 0 0);
+                }
+            }
+
+            &.clip2{
+                    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+
+                    &:hover{
+                        clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+                    }
+                }
+
+                &.clip3{
+                    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+
+                    &:hover{
+                        clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 80% 75%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+                    }
+                }
+        }
+    </style>
+</head>
+<body class="css">
+     <nav class="goback">
+        <a href="index.html">
+           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+              <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+              </path>
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mmenu internal">
+            <h1>32-clip-path</h1>
+            <img src="/03-Css/images/logo-css.png" alt="My profile" class="profile-pic">
+            <h3>Property that creates a clipping region defining which parts of an element are visible (using shapes like circle(), polygon(), or SVG paths).</h3> 
+        </header>
+        <section>
+            <h3 class="subtitle">Example 01:</h3>
+            <div class="clip clip1"></div>
+            <h3 class="subtitle">Example 02:</h3>
+            <div class="clip clip2"></div>
+            <h3 class="subtitle">Example 03:</h3>
+            <div class="clip clip3"></div>  
+        </section>
+    </main>
+
+
+</body>
+</html> 
