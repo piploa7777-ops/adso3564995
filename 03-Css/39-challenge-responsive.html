@@ -3,69 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>38-media-queries</title>
+    <title>39-challenge-responsive</title>
     <style>
         *{
             transition: all 0.4s ease;
         }
 
         body{
-            background-color: #2e0c0c;
+            background: url(images/hashiras.jpg) no-repeat center / cover;
+            background-color: #f7d2d2;
             color: #fff;
             font-family: sans-serif;
             padding: 0;
             margin: 0;
 
             main{
-                border: 10px solid #fff;
+                
                 padding: 1rem;
                 margin: 2rem auto;
                 width: 1280px; /*1280px - (20px + 32px)*/
 
                 header{
                     figure.logo{
-                        background: url(images/Logo_demonslayer.png) no-repeat center;
+                        background: url(images/logo_ds.png) no-repeat center;
                         margin: 0 auto;
-                        height: 354px;
+                        height: 500px;
                         padding: 0;
-                        width: 919px;
+                        width: 480px;
                     }
                     menu{
                         margin: 0;
                         padding: 0;
 
                         a:is(:link, :visited){
-                            background: #fff;
-                            color: #013571;
-                            font-size: 1.2rem;
+                            color: #a1e5fd;
+                            font-size: 2rem;
                             padding: 1.4rem 1rem;
                             display: inline-block;
                             text-align: center;
                             text-decoration: none;
+                            height: 350px;
                             width: 282px;
+                            
+
+                            &:nth-of-type(1){
+                                background: url(images/tokito.jpg) no-repeat center;
+                                
+                            }
+                            &:nth-of-type(2){
+                                background: url(images/Tanjiro_Kamado.jpg) no-repeat center;
+                                
+                            }
+                            &:nth-of-type(3){
+                                background: url(images/gyomei.jpg) no-repeat center;
+                                
+                            }
+
+                            &:nth-of-type(4){
+                                background: url(images/tomioka.jpg) no-repeat center;
+                                
+                            }
 
                             &:hover{
-                                background: linear-gradient(#013571 90%, #fff 90%);
                                 transform: translateY(10px);
-                                color: #fff;
+                                /*color: #fff;*/
                             }
                         }
                     }
                 }
                 section{
-                    h2{
-                        text-align: center;
-                        font-size: 2.8rem;
-                        
-                        &:nth-of-type(2),
-                        &:last-of-type{
-                            display: none;
+                    div.parent{
+                        margin-top: 1rem;
+                        div.left,
+                        div.text{
+                            vertical-align: top;
+                            display: inline-block;
+                            text-align: center;
+                        }
+                        div.left{
+                            width: 212px;
+                            height: 212px;
+                            margin-right: 2rem;
+                            &.left1{
+                                background: url(images/muichiro_tokito.jpg) no-repeat center /cover;
+                                box-shadow: 0 0 14px #fff;
+                            }
+                            &.left2{
+                                background: url(images/tanjiro.jpg) no-repeat center /cover;
+                                box-shadow: 0 0 14px #fff;
+                            }
+                            &.left3{
+                                background: url(images/gyomei_himejima.jpg) no-repeat center /cover;
+                                box-shadow: 0 0 14px #fff;
+                            }
+                            &.left4{
+                                background: url(images/giyuu_tomioka.jpg) no-repeat center /cover;
+                                box-shadow: 0 0 14px #fff;
+                            }
+                            &.left5{
+                                background: url(images/sanemi_shinazuwaga.jpg) no-repeat center /cover;
+                                box-shadow: 0 0 14px #fff;
+                            }
+                            &.left6{
+                                background: url(images/rengoku.jpg) no-repeat center /cover;
+                                box-shadow: 0 0 14px #fff;
+                            }
+                               &:hover{
+                                    transform: scale(1.2);
+                                }
+                        }
+                        div.text{
+                            width: 950px;
                         }
                     }
-                    p{
-                        line-height: 1.8rem;
-                        text-align: justify;
-                    }
+
+
                 }
             }
         }
@@ -79,24 +131,14 @@
 
                     header{
                         figure.logo{
-                            background: url(images/pepsi02.png) no-repeat center;
-                            width: 348px;
-                            height: 370px;
+                            background: url(images/logo_ds.png) no-repeat center;
+                            width: 500px;
+                            height: 500px;
                         }
 
                         menu{
                             a:is(:link, :visited){
-                                width: 124px;
-                            }
-                        }
-                    }
-                    section{
-                        h2{
-                            &:first-of-type{
-                                display: none;
-                            }
-                            &:nth-of-type(2){
-                                display: block;
+                                width: 125px;
                             }
                         }
                     }
@@ -111,9 +153,9 @@
 
                     header{
                         figure.logo{
-                            background: url(images/pepsi03.png) no-repeat center;
-                            width: 156px;
-                            height: 162px;
+                            background: url(images/logo_ds.png) no-repeat center;
+                            width: 500px;
+                            height: 500px;
                         }
 
                         menu{
@@ -146,17 +188,46 @@
             <menu>
                 <a href="">Tokito</a>
                 <a href="">Tanjiro kamado</a>
-                <a href="">Shinazuwaga</a>
+                <a href="">Gyomei</a>
                 <a href="">Tomioka</a>
-            </menu>
-            <section>
-                <h2>Desktop: > 1280px </h2>
-                <h2>Tablet: < 1280px > 800px></h2>
-                <h2>Mobile: < 800px </h2>
-            </section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam obcaecati neque quos reprehenderit alias doloremque perspiciatis exercitationem vitae debitis repudiandae sequi, laborum accusantium quisquam quibusdam similique dicta reiciendis? Excepturi.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam obcaecati neque quos reprehenderit alias doloremque perspiciatis exercitationem vitae debitis repudiandae sequi, laborum accusantium quisquam quibusdam similique dicta reiciendis? Excepturi.</p>
+            </menu>            
         </header>
+        <section>
+            <div class="parent">
+                <div class="left left1"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto sed atque! Temporibus amet fugiat ipsam reiciendis pariatur officia. Veniam sint minus autem, quod aperiam, beatae ea nulla repellat, culpa vel quia deleniti modi dignissimos eos ipsam non earum id excepturi eius consequuntur quidem. Laborum repellat, reiciendis eos fugiat, nostrum vitae, nihil labore sapiente temporibus sequi aperiam molestiae veritatis quod!</p>
+                </div>
+            </div>
+            <div class="parent">
+                <div class="left left2"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto sed atque! Temporibus amet fugiat ipsam reiciendis pariatur officia. Veniam sint minus autem, quod aperiam, beatae ea nulla repellat, culpa vel quia deleniti modi dignissimos eos ipsam non earum id excepturi eius consequuntur quidem. Laborum repellat, reiciendis eos fugiat, nostrum vitae, nihil labore sapiente temporibus sequi aperiam molestiae veritatis quod!</p>
+                </div>
+            </div>
+            <div class="parent">
+                <div class="left left3"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto sed atque! Temporibus amet fugiat ipsam reiciendis pariatur officia. Veniam sint minus autem, quod aperiam, beatae ea nulla repellat, culpa vel quia deleniti modi dignissimos eos ipsam non earum id excepturi eius consequuntur quidem. Laborum repellat, reiciendis eos fugiat, nostrum vitae, nihil labore sapiente temporibus sequi aperiam molestiae veritatis quod!</p>
+                </div>
+            </div>
+            <div class="parent">
+                <div class="left left4"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto sed atque! Temporibus amet fugiat ipsam reiciendis pariatur officia. Veniam sint minus autem, quod aperiam, beatae ea nulla repellat, culpa vel quia deleniti modi dignissimos eos ipsam non earum id excepturi eius consequuntur quidem. Laborum repellat, reiciendis eos fugiat, nostrum vitae, nihil labore sapiente temporibus sequi aperiam molestiae veritatis quod!</p>
+                </div>
+            <div class="parent">
+                <div class="left left5"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto sed atque! Temporibus amet fugiat ipsam reiciendis pariatur officia. Veniam sint minus autem, quod aperiam, beatae ea nulla repellat, culpa vel quia deleniti modi dignissimos eos ipsam non earum id excepturi eius consequuntur quidem. Laborum repellat, reiciendis eos fugiat, nostrum vitae, nihil labore sapiente temporibus sequi aperiam molestiae veritatis quod!</p>
+                </div>
+            <div class="parent">
+                <div class="left left6"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto sed atque! Temporibus amet fugiat ipsam reiciendis pariatur officia. Veniam sint minus autem, quod aperiam, beatae ea nulla repellat, culpa vel quia deleniti modi dignissimos eos ipsam non earum id excepturi eius consequuntur quidem. Laborum repellat, reiciendis eos fugiat, nostrum vitae, nihil labore sapiente temporibus sequi aperiam molestiae veritatis quod!</p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
