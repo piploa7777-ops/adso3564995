@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40-steps</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <style>
+        :root{
+            --size: 256px;
+        }
+
+        section{
+            div.bg{
+                background: url(images/bg-steps.png) no-repeat center / cover ;
+                outline: 4px solid #fff;
+                border-radius: 12px;
+                corner-shape: squircle;
+                position: relative;
+                height: 540px;
+
+                div.instructions{
+                    background-color: #000000d2;
+                    border-radius: 12px;
+                    text-align: center;
+                    corner-shape: squircle;
+                    outline: 4px dashed #fff;
+                    padding: 0.4rem;
+                    width: 300px;
+                    position: absolute;
+                    top: 26px;
+                    left: 26px;
+                    width: 300px;
+
+                }
+
+                div.trainer{
+                    background: url(images/steps-all.png) no-repeat;
+                    background-position-x: 0;
+                    transform: scale(.6);
+                    position: absolute;
+                    bottom: 20px;
+                    left: 55px;
+                    height: var(--size);
+                    width: var(--size);
+
+                    animation: 0.6s animTrainer steps(4) infinite;
+
+                    &.front{background-position-y: calc(var(--size)*0);}
+                    &.left{background-position-y: calc(var(--size)*-1);}
+                    &.right{background-position-y: calc(var(--size)*-2);}
+                    &.back{background-position-y: calc(var(--size)*-3);}
+                }
+
+            }
+        }
+
+        @keyframes animTrainer{
+            100% { background-position-x: calc(var(--size) * -4);}
+        }
+    </style>
+</head>
+<body class="css">
+     <nav class="goback">
+        <a href="index.html">
+           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffff" viewBox="0 0 256 256">
+              <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+              </path>
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mmenu internal">
+            <h1>40-steps</h1>
+            <img src="/03-Css/images/logo-css.png" alt="My profile" class="profile-pic">
+            <h3> (steps()) used in CSS animations to split transitions into discrete frames, commonly used for frame-by-frame sprite animations.</h3> 
+        </header>
+        <section>
+            <div class="bg">
+                <div class="instructions">Please press arrow keys: 
+                    <br>
+                    &larr; &rarr; &darr; &uarr;</div>
+                <div class="trainer front"></div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const trainer = document.querySelector('.trainer');
+        document.addEventListener('keyup', function(e){
+        switch(e.keyCode){
+            case 37: //Left
+            trainer.classList.remove ('front', 'right', 'back');
+            trainer.classList.add('left');
+            break;
+            case 38: //Front
+            trainer.classList.remove ('left', 'right', 'back');
+            trainer.classList.add('front');
+            break;
+            case 39: //Right
+            trainer.classList.remove ('left', 'front', 'back');
+            trainer.classList.add('right');
+            break;
+            case 40: //Bottom
+            trainer.classList.remove ('left', 'front', 'right');
+            trainer.classList.add('back');
+            break;
+
+            
+        }
+        });
+    </script>
+
+</body>
+</html> 
